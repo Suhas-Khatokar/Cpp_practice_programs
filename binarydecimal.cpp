@@ -4,7 +4,7 @@ using namespace std;
 
 int main () {
     // Binary to decimal
-    /*int n;
+    int n;
     cin >> n;
 
     int num = 0;
@@ -17,18 +17,6 @@ int main () {
         p2 = p2*2;
     }
 
-    cout<<num;*/
-
-    //Decimal to binary
-    int m;
-    cin >> m;
-
-    int bnum = 0;
-
-    while (m>0) {
-        bnum = bnum*10 + (m%2);
-        m=m/2;
-    }
-    
+    cout<<num;  
     return 0;
 }
