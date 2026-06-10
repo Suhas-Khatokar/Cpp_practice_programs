@@ -45,7 +45,6 @@ int main() {
             index = i;
             break; 
         }
-
     }
     cout<<index;
 }
