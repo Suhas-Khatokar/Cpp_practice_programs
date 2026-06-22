@@ -1,6 +1,14 @@
 #include<iostream>
 using namespace std;
 
+void swapval(int *x, int *y) {
+
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+
+}
+
 int main() {
     //Addition using pointers
     int x,y;
@@ -21,4 +29,16 @@ int main() {
     cout<<ptr_sum<<endl; //Prints the address of sum variable
     cout<<&ptr_sum; //Prints the address of ptr_sum pointer
     return 0;
+
+
+    //Using pointers for call by reference
+    int a = 12;
+    int b = 15;
+
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+
+    swapval(ptr1, ptr2);
+    cout<<a<<" "<<b;
+
 }
