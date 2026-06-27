@@ -31,10 +31,6 @@ Cpp_programs
 
 This repository serves as my C++ learning journal. Each folder contains programs that help me understand a particular concept or algorithm through implementation.
 
-## 🛠️ Language
-
-- C++17
-
 ## 🚀 Future Additions
 
 - Strings
