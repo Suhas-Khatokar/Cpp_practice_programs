@@ -108,8 +108,6 @@ int main() {
     }
     cout<<endl;
 
-    squaredArray(arr, s);
-
     for (int &x:arr) {
         cout<<x<<" ";
     }
