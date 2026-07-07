@@ -13,6 +13,7 @@ Cpp_programs
 ├── 📁 Pointers
 ├── 📁 Recursion
 ├── 📁 Sorting
+├── 📁 Strings
 └── 📁 Two Pointers
 ```
 
@@ -26,6 +27,7 @@ Cpp_programs
 - Recursion
 - Pointers
 - Two Pointer Technique
+- Strings
 
 ## 🎯 Goal
 
@@ -33,7 +35,6 @@ This repository serves as my C++ learning journal. Each folder contains programs
 
 ## 🚀 Future Additions
 
-- Strings
 - Binary Search
 - STL
 - Linked Lists
