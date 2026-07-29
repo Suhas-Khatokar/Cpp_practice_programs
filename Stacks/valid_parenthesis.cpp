@@ -11,17 +11,17 @@ bool isValid(string s) {
         if (s[i] == '[' || s[i] == '{' || s[i] == '(') st.push(s[i]);
 
         else {    
-            if (st.size() == 0) return false;
+            if (st.size() == 0) return false; //Case where opening brackets are less than closing
 
             if ((st.top() == '(' && s[i] == ')') || 
             (st.top() == '[' && s[i] == ']') || 
             (st.top() == '{' && s[i] == '}')) {
                 st.pop();
-            } else return false;
+            } else return false; // If no match then false
         }
     }
 
-    return st.size()==0;
+    return st.size()==0; //If stack is empty, returns true or else false
     
 }
 
