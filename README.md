@@ -31,6 +31,8 @@ Cpp_programs
 - Pointers
 - Two Pointer Technique
 - Strings
+- Linked Lists
+- Stacks and Queues
 
 ## 🎯 Goal
 
