@@ -8,11 +8,14 @@ A collection of C++ programs and Data Structures & Algorithms problems that I'm 
 Cpp_programs
 ├── 📁 2D Arrays
 ├── 📁 Arrays and Vectors
+├── 📁 Linked Lists
 ├── 📁 Maths
 ├── 📁 Pattern Problems
 ├── 📁 Pointers
+├── 📁 Queues
 ├── 📁 Recursion
 ├── 📁 Sorting
+├── 📁 Stacks
 ├── 📁 Strings
 └── 📁 Two Pointers
 ```
@@ -37,8 +40,6 @@ This repository serves as my C++ learning journal. Each folder contains programs
 
 - Binary Search
 - STL
-- Linked Lists
-- Stacks & Queues
 - Trees
 - Graphs
 - Dynamic Programming
