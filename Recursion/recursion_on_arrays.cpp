@@ -41,6 +41,12 @@ void subsetSum(int *arr, int n, int i, vector <int> &result, int sum) {
     subsetSum(arr, n, i+1, result, sum); //do not pick the ith element
 }
 
+void reverseArray(int *arr, int i, int size) {
+    if (i==size/2) return;
+    swap(arr[i], arr[size-i]);
+    reverseArray(arr, i+1, size);
+}
+
 int main() {
 
     /*int arr[6] = {2, 3, 5, 20, 1, 0};
@@ -52,7 +58,7 @@ int main() {
     int sum = sumOfElements(arr, 6, 5);
     cout<<sum;
 
-    findElement(arr, 6, 1, 45);*/
+    findElement(arr, 6, 1, 45);
 
     int arr[] = {1, 2, 3};
     vector<int> result;
@@ -60,6 +66,13 @@ int main() {
 
     for (int i=0; i<result.size(); i++) {
         cout<<result[i]<<" ";
+    }*/
+
+    int arr[] = {1, 2, 3, 4, 5};
+    reverseArray(arr, 0, 4);
+
+    for (int i=0; i<5; i++) {
+        cout<<arr[i]<<" ";
     }
     
     return 0;
