@@ -70,6 +70,7 @@ void postOrderTraversal(Node *root) {
 void levelOrderTraversal(Node *root) {
     // queue<Node*> stores addresses of tree nodes, so root can be pushed directly without dereferencing.
     // curr gets the pointer from the queue, accesses that node, then pushes its left/right child pointers.
+    if (root == nullptr) return;
     queue <Node *> q;
     q.push(root);
 
@@ -82,6 +83,24 @@ void levelOrderTraversal(Node *root) {
         if (curr->right != nullptr) q.push(curr->right);
     }
     
+}
+
+void separateLevelsTraversal(Node *root) {
+    if (root == nullptr) return;
+    queue <Node *> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        int n = q.size();
+        for (int i=0; i<n; i++) {
+            Node *curr = q.front();
+            cout<<curr->data<<" ";
+            q.pop();
+            if (curr->left != nullptr) q.push(curr->left);
+            if (curr->right != nullptr) q.push(curr->right);
+        }
+        cout<<endl;
+    }
 }
 
 
@@ -107,7 +126,7 @@ int main() {
     postOrderTraversal(root);
     cout<<endl;
     //2 4 5 3 11
-    levelOrderTraversal(root);
+    separateLevelsTraversal(root);
     //1 2 3 4 5
     return 0;
 }
