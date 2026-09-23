@@ -15,6 +15,7 @@ Cpp_programs
 ├── 📁 Pointers
 ├── 📁 Queues
 ├── 📁 Recursion
+├── 📁 STL
 ├── 📁 Sorting
 ├── 📁 Stacks
 ├── 📁 Strings
@@ -30,6 +31,7 @@ Cpp_programs
 - Pattern Problems
 - Sorting Algorithms
 - Recursion
+- STL
 - Pointers
 - Two Pointer Technique
 - Strings
@@ -43,6 +45,5 @@ This repository serves as my C++ learning journal. Each folder contains programs
 ## 🚀 Future Additions
 
 - Binary Search
-- STL
 - Graphs
 - Dynamic Programming
