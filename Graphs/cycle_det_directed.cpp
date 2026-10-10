@@ -40,7 +40,7 @@ public:
 
         for (int i=0; i<V; i++) {
             if (vis[i] == 0) {
-                if(dfs(i, vis, path)) return true;;
+                if(dfs(i, vis, path)) return true;
             }
         }
 

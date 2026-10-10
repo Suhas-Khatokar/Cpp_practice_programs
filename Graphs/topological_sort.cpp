@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <queue>
 #include <stack>
 #include <vector>
 
@@ -60,6 +61,47 @@ public:
         }
     }
 
+    //Topological Sort using BFS (Kahn's Algo) works on 'indegree'
+    // 3->1<-2 => indegree of 1 is 2
+    //You dont need a vis vec for this approach since indeg will become 0 only once for each node
+    //Step 1 Calculate indegree of each node
+    //Step 2 PUSH in queue the nodes whose indegree is 0
+
+    void bfs(vector <int> &indeg, vector <int> &v) {
+        queue <int> q;
+
+        for (int i=0; i<V; i++) {
+            for (int x : l[i]) {
+                indeg[x]++;
+            }
+        }
+        for (int i=0; i<V; i++) {
+            if (indeg[i] == 0) q.push(i);
+        }
+
+        while (!q.empty()) {
+            int curr = q.front();
+            q.pop();
+            v.push_back(curr);
+
+            for (int v : l[curr]) {
+                indeg[v]--;
+                if (indeg[v] == 0) q.push(v);
+            }
+        }
+    }
+
+    void topoSortBFS() {
+        vector <int> indeg(V);
+        vector <int> v;
+
+        bfs(indeg, v);
+
+        for (int i=0; i<v.size(); i++) {
+            cout<<v[i]<<" ";
+        }
+    }
+
 };
 
 int main() {
@@ -72,5 +114,7 @@ int main() {
     g.addEdge(3, 1);
     vector <int> vis(6);
     g.topoSort(vis);
+    cout<<endl;
+    g.topoSortBFS();
     return 0;
 }
