@@ -20,7 +20,8 @@ int frog_jump(vector <int> &v, int i, vector <int> &dp) {
 int frog_jump_tabulation(vector <int> &v, vector <int> &dp) {
     int n = v.size();
     if (n==1) return 0;
-    dp[1] = abs(dp[1]-dp[0]);
+    dp[0] = 0;
+    dp[1] = abs(v[1]-v[0]);
     for (int i=2; i<n; i++) {
         int jump1 = dp[i-1]+abs(v[i-1]-v[i]);
         int jump2 = dp[i-2]+abs(v[i-2]-v[i]);
@@ -35,7 +36,7 @@ int main() {
     vector <int> dp(n+1, -1);
     int min_cost = frog_jump(v, n-1, dp);
     int minc = frog_jump_tabulation(v, dp);
-    cout<<min_cost;
-    //cout<<minc;
+    cout<<min_cost<<endl;
+    cout<<minc;
     return 0;
 }
